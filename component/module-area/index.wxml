@@ -1,0 +1,31 @@
+<!--component/module-area/index.wxml-->
+<view class="module-area">
+  <!-- 选择词书 -->
+  <view class="word-book" bindtap="toSelectWordBook">
+    <select-word-book-defalut wx:if="{{ bookInfo !== null && !bookInfo.currentBook}}"></select-word-book-defalut>
+    <word-book class="word-book-custom" wx:if="{{ bookInfo !== null && bookInfo.currentBook}}" status="修改>" statusStyle="font-size: 12px; font-weight: 600; color: #7a7a7a;" bookInfo="{{bookInfo.currentBook}}"></word-book>
+  </view>
+  <view class="content">
+    <!-- 今日计划 -->
+    <view class="plan">
+      <view class="plan-title">今日计划</view>
+      <view class="plan-content">
+        <view class="need-learn">
+          <view class="learn-title">还需学</view>
+          <view class="learn-count">{{bookInfo.currentBook ? bookInfo.currentBook.planCount - bookInfo.currentBook.haveLearnCount : 0 }}</view>
+        </view>
+        <view class="need-review">
+          <view class="review-title">需复习</view>
+          <view class="review-count">{{bookInfo.currentBook ? bookInfo.currentBook.needReview : 0}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 功能区 -->
+    <view class="functional-area">
+      <functional-item title="英文选意" bind:clickFunc="toChooseMeaning" />
+      <functional-item title="中文选词" bind:clickFunc="toChooseWord" />
+      <functional-item title="发音测试" bind:clickFunc="toSpokenTest" />
+      <functional-item title="名著阅读" bind:clickFunc="toReadBook" />
+    </view>
+  </view>
+</view>

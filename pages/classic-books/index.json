@@ -1,0 +1,7 @@
+{
+  "navigationStyle":  "custom",
+  "usingComponents": {
+    "tab-page": "../../base_ui/tab-page/index",
+    "row": "../../base_ui/row/index"
+  }
+}

@@ -1,0 +1,27 @@
+<!--base_ui/tab-page/index.wxml-->
+<view class="tab-page">
+  <!-- 状态栏 -->
+  <view class="status-bar"
+    style="height: {{statusBarHeight}}px;"></view>
+  <!-- 导航栏 -->
+  <view class="tab-bar">
+    <view class="back-icon" bindtap="goBack">
+      <van-icon size="20px" color="black" name="arrow-left" />
+    </view>
+    <view class="titles" bindtap="changeCurrentIndex">
+      <block wx:for="{{titleArr}}" wx:key="index">
+        <view class="title-item" data-index="{{index}}" style="{{currentIndex === index ? 'border-bottom: ' + activeColor + ' ' + borderWeight + 'px solid; color: ' + activeColor : ''}}">{{item}}</view>
+      </block>
+    </view>
+    <view class="right-icon">
+    </view>
+  </view>
+  <!-- 内容页 -->
+  <swiper class="contents" current="{{currentIndex}}" bindchange="sliding">
+    <block wx:for="{{titleArr}}" wx:key="index">
+      <swiper-item class="tab-item">
+        <slot name="{{'content' + index}}"></slot>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

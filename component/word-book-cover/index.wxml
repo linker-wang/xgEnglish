@@ -1,0 +1,5 @@
+<!--component/word-book-cover/index.wxml-->
+<view class="word-book-cover" bindtap="clickIt">
+  <view class="word-book-name">{{wordBook.bookName}}</view>
+  <view class="word-count">共 {{wordBook.wordCount}} 个词</view>
+</view>

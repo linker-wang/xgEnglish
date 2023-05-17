@@ -1,0 +1,39 @@
+<!--component/register-form/index.wxml-->
+<view class="login-form">
+  <view class="login-inner">
+    <view class="title">注 册</view>
+    <!-- 输入信息 -->
+    <view class="login-form-group">
+      <!-- 用户名 -->
+      <row class="user-name-row" bottonBorder="{{false}}" leftText="用户名" leftWidth="80px" leftTextColor="rgb(122, 159, 175)" bgc="rgba(134, 125, 136, 0.5)" borderRadius="10px" marginBottom="20px">
+        <view slot="right">
+          <input type="text" placeholder="请输入用户名" bindinput="inputUserName" model:value="{{userName}}" />
+        </view>
+      </row>
+      <!-- 密码 -->
+      <row class="password-row" bottonBorder="{{false}}" leftText="密码" leftWidth="80px" leftTextColor="rgb(122, 159, 175)" bgc="rgba(134, 125, 136, 0.5)" borderRadius="10px" marginBottom="20px">
+        <view slot="right">
+          <input type="password" placeholder="请输入密码" bindinput="inputPassword" model:value="{{password}}" />
+        </view>
+      </row>
+      <!-- 确认密码 -->
+      <row class="ensure-password-row" bottonBorder="{{false}}" leftText="确认密码" leftWidth="80px" leftTextColor="rgb(122, 159, 175)" bgc="rgba(134, 125, 136, 0.5)" borderRadius="10px" marginBottom="20px">
+        <view slot="right">
+          <input type="password" placeholder="请输入密码" bindinput="inputEnsurePassword" model:value="{{ensurePassword}}" />
+        </view>
+      </row>
+      <!-- 邮箱 -->
+      <row class="email-row" bottonBorder="{{false}}" leftText="邮箱" leftWidth="80px" leftTextColor="rgb(122, 159, 175)" bgc="rgba(134, 125, 136, 0.5)" borderRadius="10px">
+        <view slot="right">
+          <input type="text" placeholder="请输入邮箱" bindinput="inputEmail" model:value="{{email}}" />
+        </view>
+      </row>
+    </view>
+    <!-- 确定按钮 -->
+    <view class="login-btn">
+      <van-button class="" round type="info" color="#4b6d9a" size="large" bindtap="toRegister">确认</van-button>
+    </view>
+    <!-- 返回登录 -->
+    <view class="forget" bindtap="returnLogin">已有账号，前往登录</view>
+  </view>
+</view>

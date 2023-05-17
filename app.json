@@ -1,13 +1,44 @@
 {
-    "pages": [
-        "pages/index/index"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
-        "navigationBarTextStyle": "black"
-    },
-    "style": "v2",
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/home/index",
+    "pages/user/index",
+    "pages/login/index",
+    "pages/search-page/index",
+    "pages/word-detail/index",
+    "pages/select-word-book/index",
+    "pages/show-word-book/index",
+    "pages/determine-plan-page/index",
+    "pages/learning-word/index",
+    "pages/choose-meaning/index",
+    "pages/result-page/index",
+    "pages/choose-word/index",
+    "pages/spoken-test/index",
+    "pages/classic-books/index",
+    "pages/reading/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Hello! English",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#858689",
+    "selectedColor": "#5492fa",
+    "list": [
+      {
+        "iconPath": "assets/icon/tabbar/home.png",
+        "selectedIconPath": "assets/icon/tabbar/home_selected.png",
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "assets/icon/tabbar/me.png",
+        "selectedIconPath": "assets/icon/tabbar/me_selected.png",
+        "pagePath": "pages/user/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

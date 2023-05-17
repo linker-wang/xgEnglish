@@ -1,0 +1,12 @@
+<!--component/query-words/index.wxml-->
+<view class="search-words">
+  <van-search 
+    disabled="{{!enable}}"
+    value="{{keyWords}}"
+    bind:change="change"
+    shape="round"
+    placeholder="查询单词"
+    custom-class="custom-class"
+    bind:search="onSearch"
+    />
+</view>

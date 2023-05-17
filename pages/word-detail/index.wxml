@@ -1,0 +1,65 @@
+<!--pages/word-detail/index.wxml-->
+<wxs src="/utils/wxs/format.wxs" module="format" />
+<wxs src="/utils/wxs/extract.wxs" module="extract" />
+<view class="word-detail">
+  <view class="area">
+    <!-- 单词 -->
+    <view class="word">{{wordInfo.word}}</view>
+    <!-- 音标 -->
+    <view class="soundmark" wx:if="{{wordInfo.infoType === 'eng'}}">
+      <view class="usphone">{{format.formatSoundmark(wordInfo.usphone, "us")}}</view>
+      <view class="ukphone">{{format.formatSoundmark(wordInfo.ukphone, "uk")}}</view>
+    </view>
+    <!-- 拼音 -->
+    <view class="pinyin" wx:if="{{wordInfo.infoType === 'zh'}}">{{format.formatSoundmark(wordInfo.pinyin, "zh")}}</view>
+    <!-- 英文释义 -->
+    <view class="meaning" wx:if="{{wordInfo.meaning && wordInfo.meaning.length !== 0}}">
+      <block wx:for="{{wordInfo.meaning}}" wx:key="index">
+        <view class="meaning-item">
+          <view class="pos">{{extract.getPos(item)}}</view>
+          <view class="meaning-text">{{extract.getMeaning(item)}}</view>
+        </view>
+      </block>
+    </view>
+    <!-- 考试类型 -->
+    <view class="type" wx:if="{{wordInfo.type !== ''}}">{{wordInfo.type}}</view>
+  </view>
+  <view class="area" wx:if="{{wordInfo.meaning_zh && wordInfo.meaning_zh.length !== 0}}">
+    <!-- 中文释义 -->
+    <view class="meaning-zh">
+      <view class="meaning-zh-title">释义</view>
+      <block wx:for="{{wordInfo.meaning_zh}}" wx:key="index">
+        <view class="meaning-zh-item">
+          <view class="english">{{item.word}}</view>
+          <view class="eng-meaning">{{item.tran}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="area">
+    <!-- 例句 -->
+    <view class="example" wx:if="{{wordInfo.example && wordInfo.example.length !== 0}}">
+      <view class="example-title">例句</view>
+      <block wx:for="{{wordInfo.example}}" wx:key="index">
+        <view class="example-item">
+          <view class="sentence">{{item.sentence}}</view>
+          <view class="translation">{{item.translation}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 近义词 -->
+
+  <view class="area" wx:if="{{wordInfo.web_trans && wordInfo.web_trans.length !== 0}}">
+    <!-- 网络释义 -->
+    <view class="web-trans">
+      <view class="web-trans-title">网络释义</view>
+      <block wx:for="{{wordInfo.web_trans}}" wx:key="index">
+        <view class="web-trans-item">
+          <view class="web-trans-word">{{item.word}}</view>
+          <rich-text nodes="{{item.summary}}" />
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

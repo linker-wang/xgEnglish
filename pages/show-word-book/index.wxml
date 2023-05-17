@@ -1,0 +1,8 @@
+<!--pages/show-word-book/index.wxml-->
+<view class="show-word-book">
+  <block wx:for="{{wordBookList}}" wx:key="index">
+    <view class="word-book-item">
+      <word-book-cover wordBook="{{item}}" bind:clickIt="selectBook" data-book="{{item}}"></word-book-cover>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,25 @@
+<!--pages/classic-books/index.wxml-->
+<view class="classic-books">
+  <tab-page titleArr="{{titleArr}}">
+    <!-- 我的书库 -->
+    <view class="my-library" slot="content0">
+      <view class="my-library-default" wx:if="{{myLibrary.length === 0}}">书库空空如也~</view>
+      <view class="my-library-custom" wx:else>sdf</view>
+    </view>
+    <!-- 全部书籍 -->
+    <view class="all-classic" slot="content1">
+      <view class="all-classic-default" wx:if="{{classicBookList.length === 0}}">名著书籍为空~</view>
+      <view class="all-classic-custom" wx:else>
+        <block wx:for="{{classicBookList}}" wx:key="index">
+          <row bgc="white" borderRadius="5px" marginBottom="10px" bindtap="toReading" data-id="{{item._id}}">
+            <view class="left" slot="left">
+              <view class="title-cn">中文名：{{item.bookNameCn}}</view>
+              <view class="title-en">英文名：{{item.bookNameEn}}</view>
+            </view>
+            <view class="right" slot="right">点击阅读</view>
+          </row>
+        </block>
+      </view>
+    </view>
+  </tab-page>
+</view>

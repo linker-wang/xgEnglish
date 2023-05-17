@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "select-word-book-defalut": "../../component/select-word-book-defalut/index",
+    "word-book": "../../component/word-book/index",
+    "functional-item": "../../component/functional-item/index"
+  }
+}

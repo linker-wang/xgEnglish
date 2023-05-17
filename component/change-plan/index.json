@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "word-book-cover": "../../component/word-book-cover/index",
+    "van-picker": "@vant/weapp/picker/index"
+  }
+}

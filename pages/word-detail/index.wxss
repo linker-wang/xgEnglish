@@ -1,0 +1,115 @@
+/* pages/word-detail/index.wxss */
+.word-detail {
+  padding: 20px;
+}
+
+.area {
+  padding: 20px;
+  background-color: #d5e7f7;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.word {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.soundmark {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.pinyin {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.usphone {
+  margin-right: 20px;
+}
+
+.meaning, .meaning-zh {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.meaning-item {
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.pos {
+  padding-right: 20px;
+  font-style: italic;
+}
+
+.type {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: rgb(151, 149, 149);
+}
+
+.example {
+  margin-bottom: 20px;
+}
+
+.example-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.example-item {
+  margin-bottom: 20px;
+}
+
+.sentence {
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.translation {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.meaning-zh-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.meaning-zh-item {
+  margin-bottom: 10px;
+}
+
+.english {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.eng-meaning {
+  color: rgb(83, 81, 81);
+}
+
+.web-trans-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.web-trans-item {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+.web-trans-word {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}

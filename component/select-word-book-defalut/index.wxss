@@ -1,0 +1,15 @@
+/* component/select-word-book-defalut/index.wxss */
+.select-wbook-default {
+  width: 100%;
+  height: 80px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: rgb(207, 204, 204) 1px solid;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  color: rgb(94, 169, 240);
+  font-size: 24px;
+  font-weight: 600;
+}

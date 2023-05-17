@@ -1,0 +1,7 @@
+<!--component/change-word-book/index.wxml-->
+<view class="change-word-book">
+  <block wx:for="{{wordBookArr}}" wx:key="index">
+    <word-book bookInfo="{{item}}"></word-book>
+  </block>
+  <bottom-botton text="添加词书" bind:addWordBook="addWordBook"></bottom-botton>
+</view>

@@ -1,0 +1,24 @@
+<!--base_ui/row/index.wxml-->
+<view class="row {{bottonBorder ? 'hasBottonBorder' : ''}}" style="height: {{rowHeight}}px; background-color: {{bgc}}; border-radius: {{borderRadius}}; margin-bottom: {{marginBottom}};">
+  <!-- 左边区域 -->
+  <view class="left" style="color: {{leftTextColor}}; width: {{ leftWidth }};">
+    <view class="custom-left">
+      <slot name="left"></slot>
+    </view>
+    <view class="default-left">{{leftText}}</view>
+  </view>
+  <!-- 中间区域 -->
+  <view class="middle" style="color: {{middleTextColor}};">
+    <view class="custom-middle">
+      <slot name="middle"></slot>
+    </view>
+    <view class="default-middle">{{middleText}}</view>
+  </view>
+  <!-- 右边区域 -->
+  <view class="right" style="color: {{rightTextColor}};">
+    <view class="custom-right">
+      <slot name="right"></slot>
+    </view>
+    <view class="default-right">{{rightText}}</view>
+  </view>
+</view>

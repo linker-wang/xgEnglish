@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "change-plan": "../../component/change-plan/index",
+    "bottom-botton": "../../component/bottom-botton/index"
+  }
+}

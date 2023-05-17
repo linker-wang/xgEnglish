@@ -1,0 +1,12 @@
+/* pages/show-word-book/index.wxss */
+page {
+  background-color: rgb(235, 234, 234);
+}
+
+.show-word-book {
+  padding: 20px;
+}
+
+.word-book-item {
+  margin-bottom: 10px;
+}

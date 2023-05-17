@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "login-form": "../../component/login-form/index",
+    "register-form": "../../component/register-form/index"
+  }
+}

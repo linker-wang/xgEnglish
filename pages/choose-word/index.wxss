@@ -1,0 +1,54 @@
+/* pages/choose-word/index.wxss */
+page {
+  height: 100%;
+  background-color: rgb(241, 238, 238);
+}
+.choose-word {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.meaning {
+  flex-grow: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.options {
+  flex-grow: 3;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.options-item {
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: rgb(110, 108, 108);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.value {
+  padding: 10px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.icon {
+  height: 100%;
+  width: auto;
+  padding: 5px 0;
+  box-sizing: border-box;
+}

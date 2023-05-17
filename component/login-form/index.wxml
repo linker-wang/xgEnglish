@@ -1,0 +1,29 @@
+<!--component/login-form/index.wxml-->
+<view class="login-form">
+ <view class="login-inner">
+ <view class="title">登 录</view>
+  <!-- 输入信息 -->
+  <view class="login-form-group">
+    <row class="user-name-row" bottonBorder="{{false}}" leftText="用户名" leftWidth="80px" leftTextColor="rgb(122, 159, 175)" bgc="rgba(134, 125, 136, 0.5)" borderRadius="10px" marginBottom="20px">
+      <view slot="right">
+        <input type="text" placeholder="请输入用户名" bindinput="inputUserName" model:value="{{userName}}"/>
+      </view>
+    </row>
+    <row class="password-row" bottonBorder="{{false}}" leftText="密码" leftWidth="80px" leftTextColor="rgb(122, 159, 175)" bgc="rgba(134, 125, 136, 0.5)" borderRadius="10px">
+      <view slot="right">
+        <input type="password" placeholder="请输入密码"  bindinput="inputPassword" model:value="{{password}}"/>
+      </view>
+    </row>
+  </view>
+  <!-- 登录按钮 -->
+  <view class="login-btn">
+    <van-button round type="info" color="#4b6d9a" size="large" bindtap="toLogin">登录</van-button>
+  </view>
+  <!-- 注册按钮 -->
+  <view class="register-btn">
+    <van-button round type="info" color="#4b6d9a" size="large" bindtap="registerAccount" >注册</van-button>
+  </view>
+  <!-- 忘记密码 -->
+  <view class="forget">忘记密码</view>
+ </view>
+</view>

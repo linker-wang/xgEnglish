@@ -1,0 +1,14 @@
+<!--pages/select-word-book/index.wxml-->
+<view class="select-word-book">
+  <tab-page titleArr="{{titleArr}}">
+    <!-- 修改计划页 -->
+    <view class="content0" slot="content0">
+      <view class="change-plan-default" wx:if="{{!bookInfo.currentBook}}">无使用的词书</view>
+      <change-plan wx:if="{{bookInfo.currentBook}}" wordBook="{{bookInfo.currentBook}}"></change-plan>
+    </view>
+    <!-- 更改词书页 -->
+    <view class="content1" slot="content1">
+      <change-word-book wordBookArr="{{bookInfo.usedBook}}"></change-word-book>
+    </view>
+  </tab-page>
+</view>

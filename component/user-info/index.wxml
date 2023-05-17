@@ -1,0 +1,9 @@
+<!--component/user-info/index.wxml-->
+<view class="user-info" style="height: {{size}}px;">
+  <image class="user-header" style="height: {{size}}px; width: {{size}}px;" src="{{headerIcon}}" mode="heightFix"/>
+  <view class="user-content">
+    <view class="user-name">昵称：{{nickname}}</view>
+    <view class="user-id">用户名:{{username}}</view>
+  </view>
+  <van-icon class="arrow" name="arrow" />
+</view>

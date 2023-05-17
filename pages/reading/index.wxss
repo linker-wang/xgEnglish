@@ -1,0 +1,112 @@
+/* pages/reading/index.wxss */
+page {
+  height: 100%;
+  background-color: rgba(248, 240, 191, 0.616);
+}
+
+.reading {
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 40px 20px 80px;
+  font-size: 16px;
+  color: #7c7777;
+}
+
+.sentence-item {
+  padding: 10px 0;
+}
+
+.sentence {
+  padding-bottom: 5px;
+}
+
+.change-chapter-buttons {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.preview-page-button, .next-page-button {
+  flex-grow: 1;
+  background-color: #68a8db;
+  color: white;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.info-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 40px;
+  background-color: white;
+  border-top: 1px rgb(233, 229, 229) solid;
+  border-bottom: 1px rgb(233, 229, 229) solid;
+  display: flex;
+  flex-flow: row nowrap;
+  z-index: 99999;
+}
+
+.select-chapter {
+  height: 100%;
+  width: 40px;
+  flex-grow: 1;
+}
+
+.menu-icon {
+  height: 100%;
+  width: auto;
+  padding: 5px 0;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+
+.chapter-title {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.bar-right {
+  width: 40px;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row;
+  justify-content:flex-end;
+}
+
+.chapter-item {
+  padding: 10px;
+  border-bottom: 1px rgb(230, 224, 224) solid;
+  font-weight: 600;
+}
+
+.chapter-en, .chapter-cn {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chapter-en {
+  color: rgb(173, 170, 170);
+  font-size: 12px;
+}
+
+.active-chapter {
+  color: #68a8db;
+}
+
+.book-mark-name {
+  padding: 20px;
+}
+
+.book-mark-item {
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px rgb(207, 204, 204) solid;
+}

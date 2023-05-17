@@ -1,0 +1,10 @@
+<!--pages/login/index.wxml-->
+<view class="login">
+  <!-- logo -->
+  <view class="logo">
+    <image class="logo-image" src="../../assets/icon/logo_transparent.png" mode="heightFix"/>
+  </view>
+  <!-- 登录组件 -->
+  <login-form wx:if="{{isLogin}}" bind:registerAccount="registerAccount"></login-form>
+  <register-form wx:if="{{!isLogin}}" bind:returnLogin="returnLogin"></register-form>
+</view>

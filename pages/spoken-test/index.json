@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "bottom-botton": "../../component/bottom-botton/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}

@@ -1,0 +1,40 @@
+/* component/login-form/index.wxss */
+
+.login-form {
+  background-color: rgba(164, 213, 245, 0.3);
+  margin: 0 30px;
+  border-radius: 40px;
+  padding: 20px 0;
+}
+
+.login-inner {
+  box-sizing: content-box;
+  margin: 0 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Monospace;
+  font-size: 30px;
+  color: white;
+}
+
+.login-form-group{
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  margin-bottom: 20px;
+}
+
+.register-btn {
+  margin-bottom: 20px;
+}
+
+.forget {
+  text-align: right;
+  color: rgb(159, 178, 206);
+  font-size: 12px;
+  color: rgb(122, 159, 175);
+}

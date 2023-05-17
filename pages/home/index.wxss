@@ -1,0 +1,16 @@
+/* pages/home/index.wxss */
+.home {
+  padding: 60px 20px;
+}
+
+.search{
+  position: fixed;
+  top: 0;
+  left: 20px;
+  right:20px;
+  box-sizing: border-box;
+}
+
+.learn-button {
+  margin-top: 10px;
+}

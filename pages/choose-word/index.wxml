@@ -1,0 +1,12 @@
+<!--pages/choose-word/index.wxml-->
+<view class="choose-word">
+  <view class="meaning">{{wordInfo.cnMean[0].meanType + wordInfo.cnMean[0].mean}}</view>
+  <view class="options">
+    <block wx:for="{{options}}" wx:key="index">
+      <view class="options-item" style="{{index === flagMistake ? mistakeStyle : (index === flagCorrect ? correctStyle : '') }}" bindtap="clickItem" data-isRight="{{item.isRight}}"  data-index="{{index}}">
+        <view class="value">{{item.content}}</view>
+        <image class="icon" src="{{index === flagMistake ? '../../assets/icon/mistake.png' : (index === flagCorrect ? '../../assets/icon/correct.png' : '') }}" mode="heightFix"/>
+      </view>
+    </block>
+  </view>
+</view>

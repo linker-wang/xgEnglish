@@ -1,0 +1,17 @@
+<!--component/select-word-book/index.wxml-->
+<view class="word-book">
+  <view class="word-book-name">
+    <view class="name">{{bookInfo.bookName}}</view>
+    <view class="status" style="{{statusStyle}}">{{status}}</view>
+  </view>
+  <view class="progress">
+    <view class="plan">每日{{bookInfo.planCount}}词，剩余{{remainingDay}}天</view>
+    <view class="progress-bar">
+      <progress percent="{{bookInfo.finishCount / bookInfo.wordCount  * 100}}" activeColor="#42a5f5" active stroke-width="3" />
+      <view class="progress-tip">
+        <view class="text">已学单词</view>
+        <view class="percentage">{{bookInfo.finishCount}}/{{bookInfo.wordCount}}</view>
+      </view>
+    </view>
+  </view>
+</view>

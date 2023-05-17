@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "word-book": "../word-book/index",
+    "bottom-botton": "../../component/bottom-botton/index"
+  }
+}

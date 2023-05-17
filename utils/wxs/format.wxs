@@ -1,0 +1,28 @@
+function formatSoundmark(soundmark, type) {
+  if (soundmark === "") {
+    return soundmark
+  }
+  if (type === "us") {
+    return "美:/" + soundmark + "/"
+  }
+  if (type === "uk") {
+    return "英:/" + soundmark + "/"
+  }
+  if (type === "zh") {
+    return "[" + soundmark + "]"
+  }
+}
+
+function formatFinishTime(dayCount) {
+  var date = getDate().getTime()
+  date += dayCount*24*60*60*1000
+  var year = getDate(date).getFullYear()
+  var month = getDate(date).getMonth() + 1
+  var day = getDate(date).getDate()
+  return "完成日期：" + year + "年" + month + "月" + day + "日"
+}
+
+module.exports = {
+  formatSoundmark: formatSoundmark,
+  formatFinishTime: formatFinishTime
+}

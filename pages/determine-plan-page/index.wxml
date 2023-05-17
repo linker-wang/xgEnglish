@@ -1,0 +1,5 @@
+<!--pages/determine-plan-page/index.wxml-->
+<view class="determine-plan-page">
+  <change-plan wordBook="{{wordBook}}" bind:changePicker="changePlanCount"></change-plan>
+  <bottom-botton text="开始学习该计划" bind:addWordBook="addWordBook"></bottom-botton>
+</view>

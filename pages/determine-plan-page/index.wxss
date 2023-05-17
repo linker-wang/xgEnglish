@@ -1,0 +1,8 @@
+/* pages/determine-plan-page/index.wxss */
+page {
+  height: 100%;
+}
+.determine-plan-page {
+  height: 100%;
+  background-color: rgb(235, 234, 234);
+}

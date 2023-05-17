@@ -1,0 +1,17 @@
+/* pages/select-word-book/index.wxss */
+page, .select-word-book {
+  width: 100%;
+  height: 100%;
+}
+
+.content0, .content1 {
+  height: 100%;
+  background-color: rgb(235, 234, 234);
+  overflow-y: scroll;
+}
+
+.change-plan-default {
+  padding: 40px;
+  text-align: center;
+  color: rgb(177, 179, 180);
+}

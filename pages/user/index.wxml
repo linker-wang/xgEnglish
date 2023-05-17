@@ -1,0 +1,4 @@
+<!--pages/user/index.wxml-->
+<view class="user">
+  <user-info bindtap="toSetting" username="{{username}}" nickname="{{nickname}}" headerIcon="{{headerIcon}}" ></user-info>
+</view>

@@ -1,0 +1,47 @@
+/* base_ui/row/index.wxss */
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.hasBottonBorder {
+  border-bottom: rgb(231, 228, 228) 1px solid;
+}
+
+.left, .right, .middle {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.left {
+  padding-left: 10px;
+}
+
+.right {
+  padding-right: 10px;
+}
+
+.middle {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.default-left, .default-middle, .default-right {
+  display: none;
+}
+
+.custom-left:empty + .default-left {
+  display: block;
+}
+
+.custom-middle:empty + .default-middle {
+  display: block;
+}
+
+.custom-right:empty + .default-right {
+  display: block;
+}
+

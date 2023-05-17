@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "word-book-cover": "../../component/word-book-cover/index"
+  }
+}

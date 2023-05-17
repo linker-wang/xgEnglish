@@ -1,0 +1,68 @@
+/* component/module-area/index.wxss */
+.module-area {
+  width: 100%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: rgb(123, 186, 228);
+}
+
+.word-book-custom {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.content {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.plan {
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(47, 133, 231);
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.plan-title {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.plan-content {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.need-learn, .need-review {
+  flex-grow: 1;
+}
+
+.learn-title, .review-title {
+  font-size: 12px;
+  font-weight: 600;
+  padding-bottom: 2px;
+}
+
+.learn-count, .review-count {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.functional-area {
+  height: 200px;
+  flex-grow: 1;
+  background-color: rgb(97, 168, 226);
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: scroll;
+}

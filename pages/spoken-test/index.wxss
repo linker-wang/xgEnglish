@@ -1,0 +1,138 @@
+/* pages/spoken-test/index.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.spoken-test {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.speaking {
+  height: 100px;
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 70px;
+  z-index: 999;
+  background-color: rgb(235, 234, 234);
+  border-radius: 10px;
+  border: 2px rgb(97, 159, 216) solid;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.speaking-icon {
+  height: 50px;
+  width: auto;
+  padding-bottom: 10px;
+}
+.dot {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.dot-icon {
+  height: 20px;
+  width: auto;
+}
+
+.word {
+  /* flex-grow: 1; */
+  font-size: 20px;
+  font-weight: 600;
+  color: #3791da;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.rating-item {
+  border-radius: 10px;
+  border: 1px rgb(149, 198, 226) solid;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.score-title {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.score {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.faild-toast {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 80px;
+}
+
+.overlay-slot {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-icon {
+  width: 40px;
+  height: auto;
+  border-radius: 5px;
+  transform-origin: 50% 50%;
+  animation: rotating 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.next-button {
+  position: fixed;
+  right: 5px;
+  top: 0;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 20px;
+  background-color: #68a8db;
+  border-radius: 5px;
+}
+
+.tip {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}

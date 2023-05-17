@@ -1,0 +1,32 @@
+<!--pages/spoken-test/index.wxml-->
+<view class="spoken-test">
+  <view class="word" style="{{score === null || score.is_rejected === 'true' ? 'font-size: 30px;' : ''}}">{{wordInfo.word.word}}</view>
+  <view class="rating" wx:if="{{score && score.is_rejected === 'false'}}">
+    <view class="rating-item">
+      <view class="score-title">语音评分：</view>
+      <view class="score">
+        <van-rate value="{{ score.total_score }}" size="{{ 20 }}" color="#ffca28" void-icon="star" void-color="#eee" readonly allow-half="{{true}}" bind:change="onChange">
+        </van-rate>
+      </view>
+    </view>
+    <view class="tip">{{tip[score.total_score-1]}}</view>
+  </view>
+  <view class="faild-toast">
+    <van-toast id="van-toast" />
+  </view>
+  <van-overlay show="{{ show }}" z-index="9999" duration="9">
+    <view class="overlay-slot">
+      <image class="overlay-icon" src="../../assets/icon/loading.png" mode="widthFix" />
+    </view>
+  </van-overlay>
+  <view class="speaking" wx:if="{{isSpeaking}}">
+    <image class="speaking-icon" src="../../assets/icon/speaking.png" mode="heightFix" />
+    <view class="dot">
+      <block wx:for="{{count}}" wx:key="index">
+        <image class="dot-icon" src="../../assets/icon/dot.png" mode="heightFix" />
+      </block>
+    </view>
+  </view>
+  <view class="next-button" wx:if="{{(score.total_score && score.total_score >= 3 )|| faildCount >= 3}}" bindtap="nextWord">下一个</view>
+  <bottom-botton text="{{speakDefault}}" bind:startTouch="startRecord" bind:endTouch="endRecord"></bottom-botton>
+</view>

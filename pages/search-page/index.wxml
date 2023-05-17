@@ -1,0 +1,27 @@
+<!--pages/search-page/index.wxml-->
+<view class="search-page">
+  <!-- 搜索框 -->
+  <van-search class="search-bar" custom-class="search-custom" cancel-class="cancel-custom" value="{{ keyWords }}" shape="round" placeholder="请输入单词" show-action bind:change="changeKeyWords" bind:search="search" bind:focus="toFocus" bind:blur="toBlur" bind:cancel="cancelSearch"/>
+  <!-- 历史记录 -->
+  <view class="history" wx:if="{{iAssociate.length === 0 && keyWords === ''}}">
+    <!-- 标题 -->
+    <view class="history-title">
+      <view class="text">历史查询</view>
+      <view class="clear">清除</view>
+    </view>
+    <!-- 历史内容 -->
+    <view class="history-content">
+    </view>
+  </view>
+  <!-- 提示内容 -->
+  <view class="tip" wx:if="{{isFoucus && keyWords !== ''}}">搜索“{{keyWords}}”</view>
+  <!-- 联想内容 -->
+  <view class="iAssociate">
+    <block wx:for="{{iAssociate}}" wx:key="index">
+      <view class="iAssociate-item" bindtap="toWord" data-word="{{item.word}}">
+        <view class="word">{{item.word}}</view>
+        <view class="meaning">{{item.meaning}}</view>
+      </view>
+    </block>
+  </view> 
+</view>

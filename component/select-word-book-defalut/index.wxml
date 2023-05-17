@@ -1,0 +1,4 @@
+<!--component/select-word-book-defalut/index.wxml-->
+<view class="select-wbook-default">
+  <view class="select-default">请选择词书</view>
+</view>

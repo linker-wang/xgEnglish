@@ -1,0 +1,33 @@
+/* component/user-info/index.wxss */
+.user-info {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px 0;
+}
+
+.user-header {
+  border-radius: 50%;
+  border: rgb(15, 166, 226) 1px solid;
+}
+
+.user-content {
+  flex-grow: 1;
+  margin: 0 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.user-name{
+  font-size: 20px;
+  font-weight: 600;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.user-id {
+  font-size: 16px;
+  color: rgb(160, 156, 156);
+}
+

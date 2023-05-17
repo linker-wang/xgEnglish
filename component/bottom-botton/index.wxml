@@ -1,0 +1,9 @@
+<!--component/bottom-botton/index.wxml-->
+<view class="bottom-botton">
+    <view class="left">
+      <slot></slot>
+    </view>
+    <view class="content-botton">
+      <van-button type="primary" round color="#68a8db" size="large" bindtap="addWordBook" bindtouchstart="startTouch" bindtouchend="endTouch">{{text}}</van-button>
+    </view>
+</view>

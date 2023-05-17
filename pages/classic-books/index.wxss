@@ -1,0 +1,31 @@
+/* pages/classic-books/index.wxss */
+page {
+  height: 100%;
+}
+
+.classic-books {
+  height: 100%;
+}
+
+.my-library, .all-classic {
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgb(224, 221, 221);
+  overflow-y: scroll;
+}
+
+.my-library-default {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(143, 145, 146);
+}
+
+.left {
+  font-size: 14px;
+  color: rgb(105, 106, 107);
+}
+
+.right {
+  font-size: 12px;
+}

@@ -1,0 +1,16 @@
+/* component/bottom-botton/index.wxss */
+.bottom-botton {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  background-color: white;
+  z-index: 999;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.content-botton {
+  flex-grow: 1;
+}

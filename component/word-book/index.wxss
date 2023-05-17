@@ -1,0 +1,46 @@
+/* component/select-word-book/index.wxss */
+.word-book {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.word-book-name {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  color: #3e8fd0;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.progress {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.plan {
+  padding-bottom: 10px;
+}
+
+.progress-bar {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.progress-tip {
+  padding-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+

@@ -1,0 +1,31 @@
+<!--pages/learning-word/index.wxml-->
+<view class="learing-word">
+  <view class="word-name">{{wordInfo.word.word}}</view>
+  <view class="accent">
+    <view class="accentUS">{{wordInfo.word.accentUs}}</view>
+    <view class="accentUK">{{wordInfo.word.accentUk}}</view>
+  </view>
+  <view class="mean">
+    <block wx:for="{{wordInfo.cnMean}}" wx:key="index">
+      <view class="mean-item">
+        <view class="mean-type">{{item.meanType}}</view>
+        <view class="mean-content">{{item.mean}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="mnemonic">
+    <view class="mnemonic-title">词根助记</view>
+    <view class="mnemonic-content">{{wordInfo.mnemonic.content}}</view>
+  </view>
+  <!-- <view class="sentences">
+    <block wx:for="{{}}">
+      
+    </block>
+  </view> -->
+  <view class="other">
+
+  </view>
+  <bottom-botton text="下一个单词" bind:addWordBook="nextWord">
+    <image class="star-icon" src="../../assets/icon/star.png" mode="heightFix"/>
+  </bottom-botton>
+</view>

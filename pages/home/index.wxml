@@ -1,0 +1,11 @@
+<!--pages/home/index.wxml-->
+<view class="home">
+  <!-- 单词搜索 -->
+  <search-words class="search" bindtap="toSearchPage"></search-words>
+  <!-- 功能区 -->
+  <module-area bookInfo="{{bookInfo}}"></module-area>
+  <!-- 背单词 -->
+  <view class="learn-button">
+    <van-button type="primary" round color="#68a8db" size="large" bindtap="learnWord">开始背单词</van-button>
+  </view>
+</view>

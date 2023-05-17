@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search-words": "../../component/search-words/index",
+    "module-area": "../../component/module-area/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}

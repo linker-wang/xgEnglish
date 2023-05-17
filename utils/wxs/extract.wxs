@@ -1,0 +1,18 @@
+function getDotIndex(meaning) {
+  return meaning.indexOf(".")  
+}
+
+function getPos(meaning) {
+  var dotIndex = getDotIndex(meaning)
+  return meaning.slice(0, dotIndex + 1)
+}
+
+function getMeaning(meaning) {
+  var dotIndex = getDotIndex(meaning)
+  return meaning.slice(dotIndex+1)
+}
+
+module.exports = {
+  getPos: getPos,
+  getMeaning: getMeaning
+}

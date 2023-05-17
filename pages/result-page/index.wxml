@@ -1,0 +1,7 @@
+<!--pages/result-page/index.wxml-->
+<view class="result-page">
+  <view class="score">{{score}}</view>
+  <view class="return-home">
+    <bottom-botton text="返回首页" bind:addWordBook="returnHome" />
+  </view>
+</view>

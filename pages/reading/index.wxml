@@ -1,0 +1,51 @@
+<!--pages/reading/index.wxml-->
+<view class="reading">
+  <scroll-view id="reading" style="height: 100%;" scroll-y="{{true}}" enhanced="{{true}}"	show-scrollbar="{{false}}" scroll-top="{{position}}">
+    <block wx:for="{{classicBookInfo.chapter[0]}}" wx:key="index">
+      <view class="sentence-item">
+        <view class="sentence" wx:if="{{showMode === 0 || showMode === 2}}">{{item[1]}}</view>
+        <view class="sentence-trans" wx:if="{{showMode === 1 || showMode === 2}}">{{item[0]}}</view>
+      </view>
+    </block>
+  </scroll-view>
+  <!-- 轻提示 -->
+  <van-toast id="van-toast" zIndex="99999" />
+  <!-- 工具栏 -->
+  <view class="info-bar">
+    <view class="select-chapter">
+      <image class="menu-icon" src="{{isShowMenu ? '../../assets/icon/ExtendedMenu.png' : '../../assets/icon/PackUpMenu.png'}}" mode="heightFix" bindtap="changeMenu" />
+    </view>
+    <view class="chapter-title">{{classicBookInfo.chapterTitle[chapterIndex]}}</view>
+    <view class="bar-right" bindtap="clickRightButton">
+      <van-icon wx:if="{{ !isShowMenu }}" name="label-o" size="25px" custom-style="padding-right: 10px;" />
+      <van-icon wx:if="{{ isShowMenu }}" name="exchange" size="25px" custom-style="padding-right: 10px;" />
+    </view>
+  </view>
+  <!-- 弹出章节页面 -->
+  <van-popup show="{{ isShowMenu }}" position="left" custom-style="padding-top: 40px; height: 100%; width: 80%;" z-index="{{9998}}">
+    <view class="chapter" wx:if="{{!isShowBookMark}}">
+      <block wx:for="{{classicBookInfo.chapterTitle}}" wx:key="index">
+      <view class="chapter-item" bindtap="selectChapter" data-index="{{index}}">
+        <view class="{{chapterIndex === index ? 'chapter-cn active-chapter' : 'chapter-cn'}}">{{item}}</view>
+        <view class="{{chapterIndex === index ? 'chapter-en active-chapter' : 'chapter-en'}}">{{classicBookInfo.chapterTitleEN[index]}}</view>
+      </view>
+    </block>
+    </view>
+    <view class="book-mark" wx:if="{{isShowBookMark}}">
+      <block wx:for="{{bookMasks}}" wx:key="index">
+        <view class="book-mark-item" bindtap="selectBookMask" data-index="{{index}}">{{item.bookMasksTitle}}</view>
+      </block>
+    </view>
+  </van-popup>
+  <!-- 弹出创建书签页面 -->
+  <van-dialog use-slot title="添加书签" show="{{ isShowCreateBookMark }}" show-cancel-button bind:confirm="addBookMarks" bind:cancel="cancelBookMarks" zIndex="{{99999}}" confirm-button-color="#68a8db">
+    <input class="book-mark-name" placeholder="请输入书签名" value="{{newBookMark}}" bindinput="changeNewBookMark" />
+  </van-dialog>
+  <!-- 按钮 -->
+  <bottom-button text="{{showText[showMode]}}" bind:addWordBook="changeShowMode">
+    <view class="change-chapter-buttons">
+      <view class="preview-page-button" bindtap="previewChapter">上一章节</view>
+      <view class="next-page-button" bindtap="nextChapter">下一章节</view>
+    </view>
+  </bottom-button>
+</view>

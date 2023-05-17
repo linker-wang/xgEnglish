@@ -1,0 +1,22 @@
+/* component/functional-item/index.wxss */
+.functional-item {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(66, 178, 243);
+}
+
+.icon {
+  height: 100%;
+  width: auto;
+}
+
+.title {
+  flex-grow: 1;
+}

@@ -1,0 +1,15 @@
+<!--component/change-plan/index.wxml-->
+<wxs src="../../utils/wxs/format.wxs" module="format"/>
+<view class="change-plan">
+  <word-book-cover wordBook="{{wordBook}}"></word-book-cover>
+  <view class="plan">
+    <view class="finish-day">{{format.formatFinishTime(finishDayCount)}}</view>
+    <view class="plan-picker">
+      <view class="plan-title">
+        <view class="title-column1">每日单词数</view>
+        <view class="title-column2">完成天数</view>
+      </view>
+      <van-picker columns="{{ columns }}" bind:change="onChange" active-class="picker-active" custom-class="picker-root" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+/* pages/login/index.wxss */
+page{
+  height: 100%;
+}
+
+.login {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.logo{
+  height: 200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.logo-image {
+  height: 100%;
+  width: auto;
+}
+
+.login{
+  width: 100%;
+  height: 100%;
+  background-image: url("https://tosimplewzx.online:3001/asset/image/login_bgc.png");
+  background-size: 100% 100%;
+}

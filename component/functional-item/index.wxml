@@ -1,0 +1,5 @@
+<!--component/functional-item/index.wxml-->
+<view class="functional-item" bindtap="clickFunc">
+  <image class="icon" src="{{iconUrl}}" mode="heightFix"/>
+  <view class="title">{{title}}</view>
+</view>

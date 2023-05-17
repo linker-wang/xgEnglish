@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "bottom-botton": "../../component/bottom-botton/index"
+  }
+}

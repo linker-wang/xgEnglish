@@ -1,0 +1,8 @@
+{
+  "navigationStyle":  "custom",
+  "usingComponents": {
+    "tab-page": "../../base_ui/tab-page/index",
+    "change-plan": "../../component/change-plan/index",
+    "change-word-book": "../../component/change-word-book/index"
+  }
+}
